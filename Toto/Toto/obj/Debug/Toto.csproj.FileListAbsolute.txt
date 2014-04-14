@@ -1,0 +1,9 @@
+C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\bin\Debug\Toto.exe.config
+C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\bin\Debug\Toto.exe
+C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\bin\Debug\Toto.pdb
+C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.csprojResolveAssemblyReference.cache
+C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.FormLogin.resources
+C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.Properties.Resources.resources
+C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.csproj.GenerateResource.Cache
+C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.exe
+C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.pdb

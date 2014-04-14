@@ -34,6 +34,7 @@
             this.txtboxUser = new System.Windows.Forms.TextBox();
             this.txtboxPass = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -80,12 +81,22 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(17, 154);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(87, 25);
+            this.btnRegister.TabIndex = 5;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            // 
             // FormLogin
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(255, 204);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtboxPass);
             this.Controls.Add(this.txtboxUser);
@@ -109,6 +120,7 @@
         private System.Windows.Forms.TextBox txtboxUser;
         private System.Windows.Forms.TextBox txtboxPass;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnRegister;
     }
 }
 

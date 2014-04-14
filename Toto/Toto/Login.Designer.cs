@@ -32,6 +32,7 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtboxUser = new System.Windows.Forms.TextBox();
             this.txtboxPass = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -69,15 +70,26 @@
             this.txtboxPass.Size = new System.Drawing.Size(100, 20);
             this.txtboxPass.TabIndex = 3;
             // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(140, 154);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(87, 25);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 170);
+            this.ClientSize = new System.Drawing.Size(258, 204);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtboxPass);
             this.Controls.Add(this.txtboxUser);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -93,6 +105,7 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtboxUser;
         private System.Windows.Forms.TextBox txtboxPass;
+        private System.Windows.Forms.Button btnLogin;
     }
 }
 

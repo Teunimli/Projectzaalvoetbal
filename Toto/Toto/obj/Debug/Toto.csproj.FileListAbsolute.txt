@@ -7,3 +7,6 @@ C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.Pro
 C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.csproj.GenerateResource.Cache
 C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.exe
 C:\Users\Jeroen\Documents\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.pdb
+D:\GitHub\Projectzaalvoetbal\Toto\Toto\bin\Debug\Toto.exe.config
+D:\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.exe
+D:\GitHub\Projectzaalvoetbal\Toto\Toto\obj\Debug\Toto.pdb

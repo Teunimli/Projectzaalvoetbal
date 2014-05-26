@@ -149,5 +149,10 @@ namespace ProjectFifaV2
         {
             userName = un;
         }
+
+        private void btnEditPrediction_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

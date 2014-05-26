@@ -16,7 +16,7 @@ namespace ProjectFifaV2
         private DatabaseHandler dbh;
         private string userName;
 
-        List<TextBox> txtBoxList;
+        //List<TextBox> txtBoxList;
 
         public frmPlayer(Form frm, string un)
         {

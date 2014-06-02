@@ -157,5 +157,10 @@ namespace ProjectFifaV2
         {
 
         }
+
+        private void pnlPredCard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -59,7 +59,7 @@ namespace ProjectFifaV2
                         cmd.Parameters.AddWithValue("IsAdmin", 0);
                         cmd.Connection = dbh.GetCon();
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("You successfully registerd");
+                        MessageHandler.ShowMessage("You successfully registerd");
                     }
                 }
 

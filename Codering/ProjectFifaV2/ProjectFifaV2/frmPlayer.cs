@@ -42,8 +42,12 @@ namespace ProjectFifaV2
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            Hide();
-            frmlogin.BringToFront();
+            DialogResult result = MessageHandler.ShowMessageWithResult("Are you sure you want to log out?", "Log out", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK))
+            {
+                Hide();
+                frmlogin.BringToFront();
+            }         
         }
 
         private void btnShowRanking_Click(object sender, EventArgs e)

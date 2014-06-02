@@ -15,14 +15,17 @@ namespace ProjectFifaV2
         private Form frmRanking;
         private DatabaseHandler dbh;
         private string userName;
+        private Form frmlogin;
 
         //List<TextBox> txtBoxList;
 
-        public frmPlayer(Form frm, string un)
+        public frmPlayer(Form frm, string un, Form frmlog)
         {
             this.ControlBox = false;
             frmRanking = frm;
+            frmlogin = frmlog;
             dbh = new DatabaseHandler();
+
 
             InitializeComponent();
             if (DisableEditButton())
@@ -37,7 +40,7 @@ namespace ProjectFifaV2
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Hide();
-            
+            frmlogin.BringToFront();
         }
 
         private void btnShowRanking_Click(object sender, EventArgs e)
@@ -145,7 +148,6 @@ namespace ProjectFifaV2
                 //lvOverview.Items.Add(lstItem);
             }
         }
-
         internal void GetUsername(string un)
         {
             userName = un;

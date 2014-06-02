@@ -27,6 +27,7 @@ namespace ProjectFifaV2
             //frmPlayer = new frmPlayer(frmRanking);
         }
 
+        
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "" || txtPassword.Text == "")
@@ -118,7 +119,7 @@ namespace ProjectFifaV2
                 }
                 else
                 {
-                    frmPlayer = new frmPlayer(frmRanking, username);
+                    frmPlayer = new frmPlayer(frmRanking, username, this);
                     frmPlayer.Show();
                     //frmPlayer.Show();
                 }
@@ -128,6 +129,12 @@ namespace ProjectFifaV2
                 dbh.CloseConnectionToDB();
                 MessageHandler.ShowMessage("Wrong username and/or password.");
             }
+            
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

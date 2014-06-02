@@ -97,11 +97,21 @@ namespace ProjectFifaV2
             txtUsername.Text = "";
             txtPassword.Text = "";
 
-            using (SqlCeCommand cmd = new SqlCeCommand("SELECT COUNT(*) FROM [tblUsers] WHERE Username = @Username AND Password = @Password", dbh.GetCon()))
+            using (SqlCeCommand cmd = new SqlCeCommand("SELECT * FROM [tblUsers] WHERE Username = @Username AND Password = @Password", dbh.GetCon()))
             {
                 cmd.Parameters.AddWithValue("Username", username);
                 cmd.Parameters.AddWithValue("Password", password);
-                exist = (int)cmd.ExecuteScalar() > 0;
+
+                SqlCeDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (reader.GetString(1) == username && reader.GetString(2) == password)
+                    {
+                        exist = true;
+                        break;
+                    }
+                }
             }           
 
             if (exist)

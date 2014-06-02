@@ -17,6 +17,9 @@ namespace ProjectFifaV2
         private string userName;
         private Form frmlogin;
 
+        const int MINPOINTS = 0;
+        const int MAXPOINTS = 50;
+
         //List<TextBox> txtBoxList;
 
         public frmPlayer(Form frm, string un, Form frmlog)
@@ -117,29 +120,33 @@ namespace ProjectFifaV2
                 
                 Label lblHomeTeam = new Label();
                 Label lblAwayTeam = new Label();
-                TextBox txtHomePred = new TextBox();
-                TextBox txtAwayPred = new TextBox();
+                NumericUpDown numHomePred = new NumericUpDown();
+                NumericUpDown numAwayPred = new NumericUpDown();
 
                 lblHomeTeam.TextAlign = ContentAlignment.BottomRight;
                 lblHomeTeam.Text = dataRowHome["TeamName"].ToString();
-                lblHomeTeam.Location = new Point(15, txtHomePred.Bottom + (i * 30));
+                lblHomeTeam.Location = new Point(15, numHomePred.Bottom + (i * 30));
                 lblHomeTeam.AutoSize = true;
 
-                txtHomePred.Text = "0";
-                txtHomePred.Location = new Point(lblHomeTeam.Width, lblHomeTeam.Top - 3);
-                txtHomePred.Width = 40;
+                numHomePred.Value = 0;
+                numHomePred.Minimum = MINPOINTS;
+                numHomePred.Maximum = MAXPOINTS;
+                numHomePred.Location = new Point(lblHomeTeam.Width, lblHomeTeam.Top - 3);
+                numHomePred.Width = 40;
 
-                txtAwayPred.Text = "0";
-                txtAwayPred.Location = new Point(txtHomePred.Width + lblHomeTeam.Width, txtHomePred.Top);
-                txtAwayPred.Width = 40;
+                numAwayPred.Value = 0;
+                numAwayPred.Minimum = MINPOINTS;
+                numAwayPred.Maximum = MAXPOINTS;
+                numAwayPred.Location = new Point(numHomePred.Width + lblHomeTeam.Width, numHomePred.Top);
+                numAwayPred.Width = 40;
 
                 lblAwayTeam.Text = dataRowAway["TeamName"].ToString();
-                lblAwayTeam.Location = new Point(txtHomePred.Width + lblHomeTeam.Width + txtAwayPred.Width, txtHomePred.Top + 3);
+                lblAwayTeam.Location = new Point(numHomePred.Width + lblHomeTeam.Width + numAwayPred.Width, numHomePred.Top + 3);
                 lblAwayTeam.AutoSize = true;
 
                 pnlPredCard.Controls.Add(lblHomeTeam);
-                pnlPredCard.Controls.Add(txtHomePred);
-                pnlPredCard.Controls.Add(txtAwayPred);
+                pnlPredCard.Controls.Add(numHomePred);
+                pnlPredCard.Controls.Add(numAwayPred);
                 pnlPredCard.Controls.Add(lblAwayTeam);
                 //ListViewItem lstItem = new ListViewItem(dataRowHome["TeamName"].ToString());
                 //lstItem.SubItems.Add(dataRowHome["HomeTeamScore"].ToString());

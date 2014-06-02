@@ -37,6 +37,7 @@ namespace ProjectFifaV2
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Hide();
+            
         }
 
         private void btnShowRanking_Click(object sender, EventArgs e)

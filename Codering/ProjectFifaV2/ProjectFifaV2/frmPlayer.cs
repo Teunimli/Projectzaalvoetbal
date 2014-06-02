@@ -17,8 +17,8 @@ namespace ProjectFifaV2
         private string userName;
         private Form frmlogin;
 
-        const int MINPOINTS = 0;
-        const int MAXPOINTS = 50;
+        const int minPoints = 0;
+        const int maxPoints = 50;
 
         //List<TextBox> txtBoxList;
 
@@ -129,14 +129,14 @@ namespace ProjectFifaV2
                 lblHomeTeam.AutoSize = true;
 
                 numHomePred.Value = 0;
-                numHomePred.Minimum = MINPOINTS;
-                numHomePred.Maximum = MAXPOINTS;
+                numHomePred.Minimum = minPoints;
+                numHomePred.Maximum = maxPoints;
                 numHomePred.Location = new Point(lblHomeTeam.Width, lblHomeTeam.Top - 3);
                 numHomePred.Width = 40;
 
                 numAwayPred.Value = 0;
-                numAwayPred.Minimum = MINPOINTS;
-                numAwayPred.Maximum = MAXPOINTS;
+                numAwayPred.Minimum = minPoints;
+                numAwayPred.Maximum = maxPoints;
                 numAwayPred.Location = new Point(numHomePred.Width + lblHomeTeam.Width, numHomePred.Top);
                 numAwayPred.Width = 40;
 
@@ -165,9 +165,5 @@ namespace ProjectFifaV2
 
         }
 
-        private void pnlPredCard_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

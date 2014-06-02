@@ -19,6 +19,7 @@ namespace ProjectFifaV2
 
         const int minPoints = 0;
         const int maxPoints = 50;
+        const string minusSign = "-";
 
         //List<TextBox> txtBoxList;
 
@@ -101,6 +102,7 @@ namespace ProjectFifaV2
                 DataRow dataRowAway = awayTable.Rows[i];
                 ListViewItem lstItem = new ListViewItem(dataRowHome["TeamName"].ToString());
                 lstItem.SubItems.Add(dataRowHome["HomeTeamScore"].ToString());
+                lstItem.SubItems.Add(minusSign);
                 lstItem.SubItems.Add(dataRowAway["AwayTeamScore"].ToString());
                 lstItem.SubItems.Add(dataRowAway["TeamName"].ToString());
                 lvOverview.Items.Add(lstItem);
@@ -152,6 +154,7 @@ namespace ProjectFifaV2
                 pnlPredCard.Controls.Add(numHomePred);
                 pnlPredCard.Controls.Add(numAwayPred);
                 pnlPredCard.Controls.Add(lblAwayTeam);
+                
                 //ListViewItem lstItem = new ListViewItem(dataRowHome["TeamName"].ToString());
                 //lstItem.SubItems.Add(dataRowHome["HomeTeamScore"].ToString());
                 //lstItem.SubItems.Add(dataRowAway["AwayTeamScore"].ToString());

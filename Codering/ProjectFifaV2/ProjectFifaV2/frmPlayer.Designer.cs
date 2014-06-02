@@ -39,6 +39,7 @@
             this.clmAwayTeamScore = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmAwayTeam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlPredCard = new System.Windows.Forms.Panel();
+            this.clmMinusSign = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnEditPrediction
@@ -95,11 +96,12 @@
             this.lvOverview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmHomeTeam,
             this.clmHomeTeamScore,
+            this.clmMinusSign,
             this.clmAwayTeamScore,
             this.clmAwayTeam});
-            this.lvOverview.Location = new System.Drawing.Point(476, 36);
+            this.lvOverview.Location = new System.Drawing.Point(505, 36);
             this.lvOverview.Name = "lvOverview";
-            this.lvOverview.Size = new System.Drawing.Size(310, 600);
+            this.lvOverview.Size = new System.Drawing.Size(320, 600);
             this.lvOverview.TabIndex = 7;
             this.lvOverview.UseCompatibleStateImageBehavior = false;
             this.lvOverview.View = System.Windows.Forms.View.Details;
@@ -124,20 +126,25 @@
             // clmAwayTeam
             // 
             this.clmAwayTeam.Text = "Away Team";
-            this.clmAwayTeam.Width = 100;
+            this.clmAwayTeam.Width = 96;
             // 
             // pnlPredCard
             // 
-            this.pnlPredCard.Location = new System.Drawing.Point(12, 36);
+            this.pnlPredCard.Location = new System.Drawing.Point(12, 12);
             this.pnlPredCard.Name = "pnlPredCard";
             this.pnlPredCard.Size = new System.Drawing.Size(346, 599);
             this.pnlPredCard.TabIndex = 8;
+            // 
+            // clmMinusSign
+            // 
+            this.clmMinusSign.Text = "";
+            this.clmMinusSign.Width = 15;
             // 
             // frmPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 730);
+            this.ClientSize = new System.Drawing.Size(832, 639);
             this.Controls.Add(this.pnlPredCard);
             this.Controls.Add(this.lvOverview);
             this.Controls.Add(this.btnShowRanking);
@@ -166,5 +173,6 @@
         private System.Windows.Forms.ColumnHeader clmAwayTeamScore;
         private System.Windows.Forms.ColumnHeader clmAwayTeam;
         private System.Windows.Forms.Panel pnlPredCard;
+        private System.Windows.Forms.ColumnHeader clmMinusSign;
     }
 }

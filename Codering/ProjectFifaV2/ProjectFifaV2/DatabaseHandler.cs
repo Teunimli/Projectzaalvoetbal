@@ -56,14 +56,9 @@ namespace ProjectFifaV2
 
         public System.Data.DataTable FillDT(string query)
         {
-            TestConnection();
-            OpenConnectionToDB();
-
             SqlCeDataAdapter dataAdapter = new SqlCeDataAdapter(query, GetCon());
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);
-            
-            CloseConnectionToDB();
 
             return dt;
         }

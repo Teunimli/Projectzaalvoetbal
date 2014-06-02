@@ -31,7 +31,7 @@ namespace ProjectFifaV2
         {
             if (txtUsername.Text == "" || txtPassword.Text == "")
             {
-                MessageBox.Show("Both fields are required");
+                MessageHandler.ShowMessage("Both fields are required");
             }
             else
             {
@@ -67,7 +67,7 @@ namespace ProjectFifaV2
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to quit?", "Quit", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult result = MessageHandler.ShowMessageWithResult("Are you sure you want to quit?", "Quit", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
                 if (dbh.GetCon().State == ConnectionState.Open)

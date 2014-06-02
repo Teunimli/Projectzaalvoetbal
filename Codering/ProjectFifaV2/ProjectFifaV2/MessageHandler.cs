@@ -17,5 +17,10 @@ namespace ProjectFifaV2
         {
             MessageBox.Show(msgText, caption, msgbtn, msgIcon);
         }
+
+        public static DialogResult ShowMessageWithResult(string msgText, string caption, MessageBoxButtons msgbtn, MessageBoxIcon msgIcon)
+        {
+            return MessageBox.Show(msgText, caption, msgbtn, msgIcon);
+        }
     }
 }

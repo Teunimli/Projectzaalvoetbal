@@ -46,7 +46,7 @@ namespace ProjectFifaV2
 
         private void btnClearPrediction_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to clear your prediction?", "Clear Predictions", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult result = MessageHandler.ShowMessageWithResult("Are you sure you want to clear your prediction?", "Clear Predictions", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
                 // Clear predections

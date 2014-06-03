@@ -50,6 +50,7 @@ namespace ProjectFifaV2
 
         private void btnShowRanking_Click(object sender, EventArgs e)
         {
+            frmRanking = new frmRanking();
             frmRanking.Show();
         }
 

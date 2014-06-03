@@ -18,7 +18,6 @@ namespace ProjectFifaV2
             InitializeComponent();
             dbh = new DatabaseHandler();
             frmAdmin = new frmAdmin();
-            frmRanking = new frmRanking();
             //frmPlayer = new frmPlayer(frmRanking);
         }
 
@@ -75,6 +74,7 @@ namespace ProjectFifaV2
 
         private void btnShowRanking_Click(object sender, EventArgs e)
         {
+            frmRanking = new frmRanking();
             frmRanking.Show();
         }
 

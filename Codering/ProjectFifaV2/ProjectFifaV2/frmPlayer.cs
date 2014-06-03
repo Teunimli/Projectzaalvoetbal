@@ -186,7 +186,7 @@ namespace ProjectFifaV2
 
         private void btnEditPrediction_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Werkt niet...");
         }
     }
 }

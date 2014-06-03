@@ -35,6 +35,8 @@ namespace ProjectFifaV2
                 con.Close();
             }
 
+            
+
             if (!open)
             {
                 Application.Exit();

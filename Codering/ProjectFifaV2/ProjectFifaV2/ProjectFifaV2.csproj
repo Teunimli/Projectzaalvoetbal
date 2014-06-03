@@ -127,7 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB.sdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

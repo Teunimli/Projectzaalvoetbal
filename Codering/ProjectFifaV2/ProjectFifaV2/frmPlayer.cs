@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlServerCe;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,6 +11,7 @@ namespace ProjectFifaV2
         private Form frmRanking;
         private DatabaseHandler dbh;
         private string userName;
+        private int userID;
         private Form frmlogin;
 
         const int minPoints = 0;
@@ -18,13 +20,13 @@ namespace ProjectFifaV2
 
         //List<TextBox> txtBoxList;
 
-        public frmPlayer(Form frm, string un, Form frmlog)
+        public frmPlayer(Form frm, string un, Form frmlog, int userId)
         {
             this.ControlBox = false;
             frmRanking = frm;
             frmlogin = frmlog;
             dbh = new DatabaseHandler();
-
+            userID = userId;
 
             InitializeComponent();
             if (DisableEditButton())
@@ -57,7 +59,26 @@ namespace ProjectFifaV2
             if (result.Equals(DialogResult.OK))
             {
                 // Clear predections
+                foreach (Control control in pnlPredCard.Controls)
+                {
+                    NumericUpDown numControls = control as NumericUpDown;
+                    if (numControls != null)
+                    {
+                        numControls.Value = minPoints;
+                    }
+                }
+
                 // Update DB
+                dbh.TestConnection();
+                dbh.OpenConnectionToDB();
+
+                using (SqlCeCommand cmd = new SqlCeCommand("DELETE from [tblPredictions] WHERE User_ID = @UserID", dbh.GetCon()))
+                {
+                    cmd.Parameters.AddWithValue("UserID", userID);
+                    MessageHandler.ShowMessage(cmd.ExecuteNonQuery().ToString());
+                }
+
+                dbh.CloseConnectionToDB();
             }
         }
 

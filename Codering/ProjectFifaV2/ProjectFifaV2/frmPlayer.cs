@@ -67,7 +67,9 @@ namespace ProjectFifaV2
                     {
                         numControls.Value = minPoints;
                     }
+
                 }
+                MessageBox.Show("Er wordt wel gecleared behalve uit de database.");
 
                 // Update DB
                 dbh.TestConnection();

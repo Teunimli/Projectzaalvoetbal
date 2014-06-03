@@ -36,10 +36,10 @@
             this.lvOverview = new System.Windows.Forms.ListView();
             this.clmHomeTeam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmHomeTeamScore = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmMinusSign = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmAwayTeamScore = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmAwayTeam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlPredCard = new System.Windows.Forms.Panel();
-            this.clmMinusSign = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnEditPrediction
@@ -50,7 +50,6 @@
             this.btnEditPrediction.TabIndex = 1;
             this.btnEditPrediction.Text = "Edit Prediction";
             this.btnEditPrediction.UseVisualStyleBackColor = true;
-            this.btnEditPrediction.Click += new System.EventHandler(this.btnEditPrediction_Click);
             // 
             // btnClearPrediction
             // 
@@ -117,6 +116,11 @@
             this.clmHomeTeamScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.clmHomeTeamScore.Width = 50;
             // 
+            // clmMinusSign
+            // 
+            this.clmMinusSign.Text = "";
+            this.clmMinusSign.Width = 15;
+            // 
             // clmAwayTeamScore
             // 
             this.clmAwayTeamScore.Text = "Score";
@@ -134,11 +138,6 @@
             this.pnlPredCard.Name = "pnlPredCard";
             this.pnlPredCard.Size = new System.Drawing.Size(346, 599);
             this.pnlPredCard.TabIndex = 8;
-            // 
-            // clmMinusSign
-            // 
-            this.clmMinusSign.Text = "";
-            this.clmMinusSign.Width = 15;
             // 
             // frmPlayer
             // 

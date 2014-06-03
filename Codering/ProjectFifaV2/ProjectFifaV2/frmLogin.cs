@@ -21,7 +21,6 @@ namespace ProjectFifaV2
             //frmPlayer = new frmPlayer(frmRanking);
         }
 
-        
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "" || txtPassword.Text == "")
@@ -56,7 +55,6 @@ namespace ProjectFifaV2
                         MessageHandler.ShowMessage("You successfully registerd");
                     }
                 }
-
                 dbh.CloseConnectionToDB();
             }
         }
@@ -76,7 +74,7 @@ namespace ProjectFifaV2
 
         private void btnShowRanking_Click(object sender, EventArgs e)
         {
-            frmRanking.Show(); 
+            frmRanking.Show();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -106,7 +104,7 @@ namespace ProjectFifaV2
                         break;
                     }
                 }
-            }           
+            }
 
             if (exist)
             {
@@ -134,13 +132,6 @@ namespace ProjectFifaV2
                 dbh.CloseConnectionToDB();
                 MessageHandler.ShowMessage("Wrong username and/or password.");
             }
-            
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
-5

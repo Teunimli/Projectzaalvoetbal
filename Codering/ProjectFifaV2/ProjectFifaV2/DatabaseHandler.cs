@@ -11,7 +11,7 @@ namespace ProjectFifaV2
 
         public DatabaseHandler()
         {
-            con = new SqlCeConnection(@"Data Source=.\DB.sdf");
+            con = new SqlCeConnection(@"Data Source=DB.sdf");
         }
 
         public void TestConnection()

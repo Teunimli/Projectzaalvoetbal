@@ -11,6 +11,7 @@ namespace ProjectFifaV2
         private Form frmAdmin;
         private Form frmPlayer;
         private Form frmRanking;
+        private int userID;
 
         public frmLogin()
         {
@@ -100,6 +101,7 @@ namespace ProjectFifaV2
                 {
                     if (reader.GetString(1) == username && reader.GetString(2) == password)
                     {
+                        userID = reader.GetInt32(0);
                         exist = true;
                         break;
                     }
@@ -122,7 +124,7 @@ namespace ProjectFifaV2
                 }
                 else
                 {
-                    frmPlayer = new frmPlayer(frmRanking, username, this);
+                    frmPlayer = new frmPlayer(frmRanking, username, this, userID);
                     frmPlayer.Show();
                     //frmPlayer.Show();
                 }
